@@ -1,0 +1,30 @@
+{
+  "name": "maca-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+  },
+  "dependencies": {
+    "@storyblok/react": "^1.3.3",
+    "axios": "^1.1.3",
+    "bootstrap": "^5.2.2",
+    "next": "13.0.0",
+    "qs": "^6.11.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "storyblok-js-client": "^5.0.4",
+    "storyblok-react": "^0.1.2",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.4"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0"
+  }
+}

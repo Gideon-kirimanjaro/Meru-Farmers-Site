@@ -1,0 +1,18 @@
+.mainDiv {
+  padding: 30px;
+}
+#cardBodyGreen {
+  background-color: green;
+}
+#cardBodyRed {
+  background-color: red;
+}
+#cardBody:hover {
+  background-color: rgb(38, 150, 38);
+  transition: 0.8s ease-in-out;
+}
+.cardIcon {
+  height: 64px;
+  width: 64px;
+  color: white;
+}

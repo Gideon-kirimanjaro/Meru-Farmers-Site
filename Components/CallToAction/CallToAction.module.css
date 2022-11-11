@@ -1,0 +1,62 @@
+#mainDiv {
+  height: 500px;
+  background-color: white;
+  font-family: poppins;
+  padding-top: 100px;
+}
+.leftDiv {
+  width: 400px;
+  padding-left: 15px;
+  margin: auto;
+}
+.leftDiv p {
+  font-family: poppins;
+  font-size: 1.2rem;
+}
+.leftDiv p::after {
+  content: " Macadamia";
+  color: rgb(212, 114, 146);
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-style: italic;
+  border-bottom: 8px solid green;
+  border-radius: 40%;
+}
+.rightDiv {
+  border-radius: 40%;
+  width: 400px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* .leftDiv {
+    padding-right: 20px;
+  }
+  .rightDiv {
+    padding-right: 10px;
+  } */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+/* @font-face {
+  font-family: montserrat;
+  src: url(/public/fonts/montserrat/Montserrat-Bold.otf);
+} */

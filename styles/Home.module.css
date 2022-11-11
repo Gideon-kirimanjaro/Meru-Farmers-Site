@@ -1,0 +1,20 @@
+/* .container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+} */
+.container {
+  font-family: nunito;
+}
+.mainDiv {
+  box-sizing: content-box;
+  margin: 50px;
+}
+.mainDiv img {
+  height: auto;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}

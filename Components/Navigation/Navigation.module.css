@@ -1,0 +1,111 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  z-index: 999 !important;
+  /* height: 100vh; */
+  padding-right: 10px;
+  margin: 0;
+}
+.mainDiv {
+  background: white;
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: montserrat;
+  position: sticky;
+}
+.navLinks ul {
+  display: flex;
+}
+.navLinks ul {
+  list-style: none;
+}
+.navLinks ul li {
+  position: relative;
+}
+.navLinks ul li a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #5b3513;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.navLinks ul li a:hover {
+  color: black;
+}
+.navLinks ul li a:hover::after {
+  content: "";
+  background: green;
+  padding: 2px;
+  width: 60%;
+  position: absolute;
+  left: 20px;
+  bottom: -7px;
+}
+#barIcon,
+#closeIcon {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+#logo {
+  height: 40px;
+  width: 40px;
+}
+.iconsDiv {
+  display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .iconsDiv {
+    display: contents;
+    margin: 100px;
+    box-shadow: 0px 85px 15px #0c0c0a;
+  }
+  .navLinks {
+    opacity: 0.9;
+  }
+  .navLinks ul {
+    display: block;
+    position: fixed;
+    top: 50px;
+    padding-top: 5px;
+    right: 0px;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    transition: 0.4s ease-in-out;
+  }
+  .navLinks ul li {
+    margin-bottom: 8px;
+  }
+  .navLinks ul li a {
+    color: #5b3513;
+    opacity: 1;
+  }
+  #navLinksInactive ul {
+    right: -600px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
