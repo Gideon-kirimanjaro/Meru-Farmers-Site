@@ -3,14 +3,9 @@ import Navigation from "../Navigation/Navigation";
 import CustomCard from "../Ui/CustomCard/CustomCard";
 import HeaderComponent from "../Ui/HeaderComponent/HeaderComponent";
 import TextImage from "../Ui/TextImage/TextImage";
-import {
-  faHatCowboy,
-  faPlateWheat,
-  faHeader,
-  faInfo,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHeader, faInfo } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer/Footer";
-
+import BlogArticle from "../BlogArticle/BlogArticle";
 const About = () => {
   const title = "About us";
   const body = "We pride ourselves in producing the best quality Macadamia";
@@ -58,6 +53,7 @@ const About = () => {
       <TextImage content={content} height={300} width={300} />
       <HeaderComponent title={"Our values"} textColor={color} />
       <CustomCard cardData={cardData} bgColor={color} />
+      <BlogArticle color={color} />
       <Footer color={color} />
     </div>
   );

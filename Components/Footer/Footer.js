@@ -36,6 +36,7 @@ const Footer = ({ color }) => {
               <Link
                 href={item.href}
                 className="d-flex  justify-content-center p-2"
+                key={item.id}
               >
                 <FontAwesomeIcon
                   key={item.id}

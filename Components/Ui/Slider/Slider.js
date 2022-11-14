@@ -49,7 +49,13 @@ const Slider = ({ data, color }) => {
         {data.map((item) => {
           return (
             <SwiperSlide className={Styles.swiperSlide} key={item.id}>
-              <Image src={item.src} height={300} width={300} />
+              <Image
+                src={item.src}
+                height={300}
+                width={300}
+                alt="slider image"
+                priority
+              />
               <div className={Styles.swiperContent}>
                 <div>
                   <p>update</p>

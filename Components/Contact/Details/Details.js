@@ -24,9 +24,14 @@ const Details = ({ color }) => {
       style={{ width: "500px", margin: "auto" }}
     >
       <div className=" ">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <div className="d-flex" id={Styles.info} style={{ width: "200px" }}>
+            <div
+              className="d-flex"
+              id={Styles.info}
+              style={{ width: "200px" }}
+              key={index}
+            >
               <h5 className="" style={{ color: color, width: "200px" }}>
                 {item.title}:
               </h5>

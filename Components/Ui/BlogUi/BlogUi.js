@@ -18,6 +18,7 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
               style={{ borderRadius: "10%" }}
               alt="blog image"
               unoptimized
+              priority
             />
           </div>
         </div>
@@ -50,6 +51,7 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
                 height={50}
                 width={50}
                 style={{ borderRadius: "50%" }}
+                alt="admin image"
               />
               <div className="ps-4">
                 <p className="text-dark" style={{ marginBottom: "-5px" }}>

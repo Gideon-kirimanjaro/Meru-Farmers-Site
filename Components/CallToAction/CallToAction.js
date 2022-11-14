@@ -26,7 +26,13 @@ const CallToAction = ({ color }) => {
         </div>
       </div>{" "}
       <div className={Styles.rightDiv}>
-        <Image src="/images/maca.jpg" height={250} width={400} />
+        <Image
+          src="/images/maca.jpg"
+          height={250}
+          width={400}
+          priority
+          alt="image"
+        />
       </div>
     </div>
   );

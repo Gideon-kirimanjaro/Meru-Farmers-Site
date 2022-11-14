@@ -9,13 +9,16 @@ import Link from "next/link";
 import BlogUi from "../../Components/Ui/BlogUi/BlogUi";
 import Spinner from "../../Components/Ui/Spinner/Spinner";
 import { useRouter } from "next/router";
+import Footer from "../../Components/Footer/Footer";
 //------------------------------------------------------------------API------
 const CONTENT_API_KEY = "15ba85399bb4588e4ddc2b8e1a";
 const GHOST_URL = "https://gideon-kamau.ghost.io";
 
 const index = ({ blogs }) => {
   const router = useRouter();
-
+  if (router.isFallback) {
+    return <Spinner />;
+  }
   ///------------------------------NAME
   const blogTags = blogs.map((item) => {
     return item;
@@ -39,7 +42,6 @@ const index = ({ blogs }) => {
     }
   };
 
-  console.log(">>blogTags", blogTags);
   const date = (d) => {
     const newDate = new Date(d);
     const year = newDate.getFullYear();
@@ -61,9 +63,7 @@ const index = ({ blogs }) => {
     const day = newDate.getDate();
     return { day, month, year };
   };
-  if (router.isFallback) {
-    return <Spinner />;
-  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -86,30 +86,29 @@ const index = ({ blogs }) => {
           const { year } = creationDate;
 
           return (
-            <>
-              <Link
-                style={{
-                  textDecoration: "none",
-                  color: "black",
-                }}
-                key={item.id}
-                href="/blog/[id]"
-                as={`/blog/${item.slug}`}
-              >
-                <BlogUi
-                  heading={title}
-                  tag={blogTag}
-                  time={reading_time}
-                  date={`${day}th ${month} ${year}`}
-                  tagColor={blogColor}
-                  src={
-                    feature_image === null ? "/images/kids.jpg" : feature_image
-                  }
-                />
-              </Link>
-            </>
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              key={index}
+              href="/blog/[id]"
+              as={`/blog/${item.slug}`}
+            >
+              <BlogUi
+                heading={title}
+                tag={blogTag}
+                time={reading_time}
+                date={`${day}th ${month} ${year}`}
+                tagColor={blogColor}
+                src={
+                  feature_image === null ? "/images/kids.jpg" : feature_image
+                }
+              />
+            </Link>
           );
         })}
+      <Footer />
     </div>
   );
 };

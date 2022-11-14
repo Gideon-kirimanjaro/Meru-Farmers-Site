@@ -6,9 +6,9 @@ const CustomCard = ({ bgColor, cardData }) => {
     <>
       <div className="container">
         <div className="row">
-          {cardData.map((item) => {
+          {cardData.map((item, index) => {
             return (
-              <div class="col-lg-4 col-md-4">
+              <div className="col-lg-4 col-md-4" key={index}>
                 <div className={Styles.mainDiv}>
                   <div className="card  " style={{ backgroundColor: bgColor }}>
                     <div
