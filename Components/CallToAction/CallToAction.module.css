@@ -14,7 +14,7 @@
   font-size: 1.2rem;
 }
 .leftDiv p::after {
-  content: " Macadamia";
+  content: "Macadamia";
   color: rgb(212, 114, 146);
   font-weight: bold;
   font-size: 1.1rem;

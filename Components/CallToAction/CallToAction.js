@@ -29,7 +29,7 @@ const CallToAction = ({ color }) => {
         <Image
           src="/images/maca.jpg"
           height={250}
-          width={400}
+          width={300}
           priority
           alt="image"
         />

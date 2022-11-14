@@ -21,9 +21,9 @@ const ImpactSection = () => {
     },
   ];
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <HeaderComponent title={title} body={body} textColor={"#DB7093"} />
-      <TextImage content={content} height={400} width={400} />
+      <TextImage content={content} height={300} width={300} />
     </div>
   );
 };
