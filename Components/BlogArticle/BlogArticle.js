@@ -1,4 +1,5 @@
 import React from "react";
+import BreadCrumbCustom from "../Ui/BreadCrumb/BreadCrumbCustom";
 import HeaderComponent from "../Ui/HeaderComponent/HeaderComponent";
 import Slider from "../Ui/Slider/Slider";
 import Styles from "./BlogArticle.module.css";
