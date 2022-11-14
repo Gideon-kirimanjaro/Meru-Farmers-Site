@@ -22,7 +22,7 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
               loader={() => src}
               src={src}
               height={300}
-              width={350}
+              width={300}
               style={{ borderRadius: "10%", marginBottom: "10px" }}
               alt="blog image"
               priority
