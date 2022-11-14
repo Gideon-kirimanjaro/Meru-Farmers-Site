@@ -61,7 +61,7 @@ const Blog = ({ blogs }) => {
       <div className="pt-5">
         <HeaderComponent title={title} body={body} textColor={color} />
       </div>
-      <div style={{}}>
+      <div className="px-2">
         <div>
           {blogs &&
             blogs.map((item, index) => {

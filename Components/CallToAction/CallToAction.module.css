@@ -17,10 +17,11 @@
   content: "Macadamia";
   color: rgb(212, 114, 146);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-style: italic;
   border-bottom: 8px solid green;
   border-radius: 40%;
+  padding-right: 10px;
 }
 .rightDiv {
   border-radius: 40%;
