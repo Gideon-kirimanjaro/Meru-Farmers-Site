@@ -6,7 +6,15 @@ import { StyledButton } from "../StyledButton";
 import TagButton from "../TagButton/TagButton";
 const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
   return (
-    <div className="ms-3 ps-5" id={Styles.mainDiv}>
+    <div
+      className="container"
+      style={{
+        border: `2px solid ${tagColor}`,
+        paddingTop: "10px",
+        marginTop: "10px",
+        borderRadius: "10px 10px",
+      }}
+    >
       <div className="row">
         <div className="col-sm-6">
           <div className={Styles.imgDiv}>
@@ -14,10 +22,9 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
               loader={() => src}
               src={src}
               height={300}
-              width={300}
-              style={{ borderRadius: "10%" }}
+              width={350}
+              style={{ borderRadius: "10%", marginBottom: "10px" }}
               alt="blog image"
-              unoptimized
               priority
             />
           </div>
@@ -26,8 +33,6 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
           <div className={Styles.contentDiv}>
             <div className="d-flex">
               <div className="px-5">
-                {" "}
-                {/* <TagButton tag={tag} btnColor={tagColor} /> */}
                 <StyledButton primary color={tagColor}>
                   {tag}
                 </StyledButton>
