@@ -5,11 +5,11 @@ import Footer from "../Footer/Footer";
 import ImpactSection from "../ImpactSection/ImpactSection";
 import Navigation from "../Navigation/Navigation";
 import SolutionSection from "../SolutionSection/SolutionSection";
-
+import styles from "./HomeComponent.module.css";
 const HomeComponent = () => {
   const color = "#DB7093";
   return (
-    <div>
+    <div className={styles.mainDiv}>
       <Navigation color={color} />
       <CallToAction color={color} />
       <SolutionSection color={color} />
