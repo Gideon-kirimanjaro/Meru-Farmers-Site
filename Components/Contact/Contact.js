@@ -5,7 +5,7 @@ import Navigation from "../Navigation/Navigation";
 import HeaderComponent from "../Ui/HeaderComponent/HeaderComponent";
 import Details from "./Details/Details";
 
-const Contact = () => {
+const Contact = ({ blogs }) => {
   const title = "Contact us";
   const body = "We pride ourselves in producing the best quality Macadamia";
   const color = "royalblue";
@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="pt-5">
         <HeaderComponent title={title} body={body} textColor={color} />
         <Details color={color} />
-        <BlogArticle color={color} />
+        <BlogArticle color={color} blogs={blogs} />
         <Footer color={color} />
       </div>
     </div>

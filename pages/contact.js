@@ -2,7 +2,9 @@ import React from "react";
 import Contact from "../Components/Contact/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
-const contact = () => {
+const CONTENT_API_KEY = "15ba85399bb4588e4ddc2b8e1a";
+const GHOST_URL = "https://gideon-kamau.ghost.io";
+const contact = ({ blogs }) => {
   return (
     <div>
       <Head>
@@ -11,9 +13,25 @@ const contact = () => {
           content="width=device-width, width=device-width"
         />
       </Head>
-      <Contact />
+      <Contact blogs={blogs} />
     </div>
   );
 };
+const getData = async () => {
+  const res = await fetch(
+    `${GHOST_URL}/ghost/api/content/posts/?key=${CONTENT_API_KEY}&include=tags,authors,slug`
+  ).then((res) => res.json());
 
+  return res.posts;
+};
+
+export async function getStaticProps({ params }) {
+  const blogs = await getData();
+  return {
+    props: {
+      blogs: blogs,
+    },
+    revalidate: 600, // revalidate every hour
+  };
+}
 export default contact;

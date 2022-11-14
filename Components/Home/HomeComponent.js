@@ -6,7 +6,7 @@ import ImpactSection from "../ImpactSection/ImpactSection";
 import Navigation from "../Navigation/Navigation";
 import SolutionSection from "../SolutionSection/SolutionSection";
 import styles from "./HomeComponent.module.css";
-const HomeComponent = () => {
+const HomeComponent = ({ blogs }) => {
   const color = "#DB7093";
   return (
     <div>
@@ -14,7 +14,7 @@ const HomeComponent = () => {
       <CallToAction color={color} />
       <SolutionSection color={color} />
       <ImpactSection />
-      <BlogArticle color={color} />
+      <BlogArticle color={color} blogs={blogs} />
       <Footer color={color} />
     </div>
   );

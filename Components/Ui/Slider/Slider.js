@@ -46,30 +46,41 @@ const Slider = ({ data, color }) => {
         scrollbar={{ draggable: true }}
         className={Styles.mySwiper}
       >
-        {data.map((item) => {
-          return (
-            <SwiperSlide className={Styles.swiperSlide} key={item.id}>
-              <Image
-                src={item.src}
-                height={300}
-                width={300}
-                alt="slider image"
-                priority
-              />
-              <div className={Styles.swiperContent}>
-                <div>
-                  <p>update</p>
-                  <h3>{item.description}</h3>
-                  <StyledButton primary color={color}>
-                    <Link className={Styles.articleLink} href="/blog">
-                      Read Articles
-                    </Link>
-                  </StyledButton>
+        {data &&
+          data.map((item) => {
+            const { feature_image, id, title, slug } = item;
+
+            return (
+              <SwiperSlide className={Styles.swiperSlide} key={id}>
+                <Image
+                  loader={() =>
+                    feature_image == null ? "/images/kids.jpg" : feature_image
+                  }
+                  src={
+                    feature_image == null ? "/images/kids.jpg" : feature_image
+                  }
+                  height={300}
+                  width={300}
+                  alt="slider image"
+                  priority
+                />
+                <div className={Styles.swiperContent}>
+                  <div>
+                    <p>update</p>
+                    <h3>{title}</h3>
+                    <StyledButton primary color={color}>
+                      <Link
+                        className={Styles.articleLink}
+                        href={`/blog/${slug}`}
+                      >
+                        Read Article
+                      </Link>
+                    </StyledButton>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+              </SwiperSlide>
+            );
+          })}
       </Swiper>{" "}
     </div>
   );

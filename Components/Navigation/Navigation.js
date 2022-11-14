@@ -41,9 +41,9 @@ const Navigation = ({ color }) => {
       <div className={Styles.mainDiv}>
         <div>
           {" "}
-          <FontAwesomeIcon id={Styles.logo} icon={faBank}>
-            <Link href="/"></Link>
-          </FontAwesomeIcon>
+          <Link href="/" style={{ color: color }}>
+            <FontAwesomeIcon id={Styles.logo} icon={faBank}></FontAwesomeIcon>
+          </Link>
         </div>
         <div
           className={Styles.navLinks}
