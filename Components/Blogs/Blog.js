@@ -16,7 +16,7 @@ const Blog = ({ blogs }) => {
     "Read our latest blogs ranging from agriculture to humanitarian work";
 
   return (
-    <div>
+    <div className={Styles.mainDiv}>
       <Navigation color={color} />
       <div className="">
         <BreadCrumbCustom title={title} link="blog" />

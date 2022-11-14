@@ -1,3 +1,11 @@
 #mainDiv {
   font-family: montserrat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url(/images/art3.jpg);
+  background-size: cover;
+  background-position: right;
 }

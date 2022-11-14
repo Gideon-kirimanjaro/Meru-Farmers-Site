@@ -27,7 +27,7 @@ const CallToAction = ({ color }) => {
       </div>{" "}
       <div className={Styles.rightDiv}>
         <Image
-          src="/images/maca.jpg"
+          src="/images/maca2.png"
           height={250}
           width={300}
           priority

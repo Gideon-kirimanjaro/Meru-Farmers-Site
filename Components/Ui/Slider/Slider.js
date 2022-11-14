@@ -47,12 +47,13 @@ const Slider = ({ data, color }) => {
         className={Styles.mySwiper}
       >
         {data &&
-          data.map((item) => {
+          data.map((item, index) => {
             const { feature_image, id, title, slug } = item;
 
             return (
-              <SwiperSlide className={Styles.swiperSlide} key={id}>
+              <SwiperSlide className={Styles.swiperSlide} key={index}>
                 <Image
+                  key={id}
                   loader={() =>
                     feature_image == null ? "/images/kids.jpg" : feature_image
                   }
@@ -61,10 +62,10 @@ const Slider = ({ data, color }) => {
                   }
                   height={300}
                   width={300}
-                  alt="slider image"
+                  alt={id}
                   priority
                 />
-                <div className={Styles.swiperContent}>
+                <div className={Styles.swiperContent} key={index}>
                   <div>
                     <p>update</p>
                     <h3>{title}</h3>

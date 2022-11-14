@@ -48,12 +48,10 @@ const About = ({ blogs }) => {
   return (
     <div>
       <Navigation color={color} />
-
       <BreadCrumbCustom title={title} link="about" />
       <div className="">
         <HeaderComponent title={title} body={body} textColor={color} />
       </div>
-
       <TextImage content={content} height={300} width={300} />
       <HeaderComponent title={"Our values"} textColor={color} />
       <CustomCard cardData={cardData} bgColor={color} />
