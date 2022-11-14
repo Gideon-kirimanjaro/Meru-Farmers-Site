@@ -7,6 +7,7 @@ import { StyledButton } from "../../Components/Ui/StyledButton";
 import Link from "next/link";
 import BlogUi from "../../Components/Ui/BlogUi/BlogUi";
 import BlogContext from "../../store/blog-data";
+import BreadCrumbCustom from "../Ui/BreadCrumb/BreadCrumbCustom";
 const Blog = ({ blogs }) => {
   const ctx = useContext(BlogContext);
   const color = "purple";
@@ -17,7 +18,8 @@ const Blog = ({ blogs }) => {
   return (
     <div>
       <Navigation color={color} />
-      <div className="pt-5">
+      <div className="">
+        <BreadCrumbCustom title={title} link="blog" />
         <HeaderComponent title={title} body={body} textColor={color} />
       </div>
       <div className="px-2">

@@ -9,6 +9,7 @@ import Navigation from "../../Components/Navigation/Navigation";
 import HeaderComponent from "../../Components/Ui/HeaderComponent/HeaderComponent";
 import Footer from "../../Components/Footer/Footer";
 import styles from "./../../styles/Home.module.css";
+import { Breadcrumb } from "react-bootstrap";
 // const { GHOST_URL, CONTENT_API_KEY } = process.env;
 const CONTENT_API_KEY = "15ba85399bb4588e4ddc2b8e1a";
 const GHOST_URL = "https://gideon-kamau.ghost.io";
@@ -52,6 +53,17 @@ const blogArticle = ({ blog }) => {
               <StyledButton>
                 <Link href="/blog">Back </Link>
               </StyledButton>
+              <Breadcrumb className="ps-3 ">
+                <Breadcrumb.Item className="pt-1" href="/">
+                  Home
+                </Breadcrumb.Item>
+                <Breadcrumb.Item className="pt-1" href={`/blog`}>
+                  blogs
+                </Breadcrumb.Item>
+                <Breadcrumb.Item className="pt-1" active>
+                  {item.title}
+                </Breadcrumb.Item>
+              </Breadcrumb>
               {/* <HeaderComponent cl title={item.title} textColor={color} /> */}
               <h1
                 className="d-flex justify-content-center"

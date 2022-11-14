@@ -6,6 +6,7 @@ import TextImage from "../Ui/TextImage/TextImage";
 import { faHeader, faInfo } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer/Footer";
 import BlogArticle from "../BlogArticle/BlogArticle";
+import BreadCrumbCustom from "../Ui/BreadCrumb/BreadCrumbCustom";
 const About = ({ blogs }) => {
   const title = "About us";
   const body = "We pride ourselves in producing the best quality Macadamia";
@@ -47,9 +48,12 @@ const About = ({ blogs }) => {
   return (
     <div>
       <Navigation color={color} />
-      <div className="pt-5">
+
+      <BreadCrumbCustom title={title} link="about" />
+      <div className="">
         <HeaderComponent title={title} body={body} textColor={color} />
       </div>
+
       <TextImage content={content} height={300} width={300} />
       <HeaderComponent title={"Our values"} textColor={color} />
       <CustomCard cardData={cardData} bgColor={color} />

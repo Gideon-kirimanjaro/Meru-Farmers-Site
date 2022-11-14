@@ -1,6 +1,5 @@
 import React from "react";
-
-const HeaderComponent = ({ textColor, title, body }) => {
+const HeaderComponent = ({ textColor, link, title, body }) => {
   return (
     <div className="pt-4">
       <h1
