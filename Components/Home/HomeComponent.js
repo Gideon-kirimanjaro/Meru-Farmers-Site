@@ -9,7 +9,7 @@ import styles from "./HomeComponent.module.css";
 const HomeComponent = () => {
   const color = "#DB7093";
   return (
-    <div className={styles.mainDiv}>
+    <div>
       <Navigation color={color} />
       <CallToAction color={color} />
       <SolutionSection color={color} />
