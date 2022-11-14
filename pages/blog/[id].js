@@ -54,12 +54,14 @@ const blogArticle = ({ blog }) => {
                 <Link href="/blog">Back </Link>
               </StyledButton>
               <Breadcrumb className="ps-3 ">
-                <Breadcrumb.Item className="pt-1" href="/">
+                <Link className="pt-1" href="/">
                   Home
-                </Breadcrumb.Item>
-                <Breadcrumb.Item className="pt-1" href={`/blog`}>
+                </Link>
+                <div className="pt-1">/</div>
+                <Link className="pt-1" href={`/blog`}>
                   blogs
-                </Breadcrumb.Item>
+                </Link>
+                <div className="pt-1">/</div>
                 <Breadcrumb.Item className="pt-1" active>
                   {item.title}
                 </Breadcrumb.Item>
