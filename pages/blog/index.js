@@ -67,7 +67,10 @@ const index = ({ blogs }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="width=device-width, width=device-width"
+        />
       </Head>
       <Blog />
 
