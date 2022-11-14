@@ -3,9 +3,9 @@
   background-color: white;
   font-family: poppins;
   padding-top: 100px;
+  width: 100%;
 }
 .leftDiv {
-  width: 400px;
   padding-left: 15px;
   margin: auto;
 }
@@ -17,14 +17,13 @@
   content: " Macadamia";
   color: rgb(212, 114, 146);
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-style: italic;
   border-bottom: 8px solid green;
   border-radius: 40%;
 }
 .rightDiv {
   border-radius: 40%;
-  width: 400px;
   height: 100vh;
   margin: auto;
   display: flex;
@@ -33,12 +32,12 @@
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* .leftDiv {
-    padding-right: 20px;
+  .leftDiv {
+    width: 100%;
   }
   .rightDiv {
-    padding-right: 10px;
-  } */
+    width: 100%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

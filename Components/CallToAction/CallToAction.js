@@ -9,7 +9,7 @@ const CallToAction = ({ color }) => {
   return (
     <div id={Styles.mainDiv} className="d-md-flex ">
       <div className={Styles.leftDiv}>
-        <p>
+        <p className="d-flex justify-content-center">
           We pride ourselves in solving food insecurity through the growth of
         </p>{" "}
         <div className="d-flex justify-content-center">

@@ -21,7 +21,7 @@ const Details = ({ color }) => {
     <div
       id={Styles.mainDiv}
       className="d-flex justify-content-center mt-5"
-      style={{ width: "500px", margin: "auto" }}
+      style={{}}
     >
       <div className=" ">
         {data.map((item, index) => {
@@ -29,10 +29,10 @@ const Details = ({ color }) => {
             <div
               className="d-flex"
               id={Styles.info}
-              style={{ width: "200px" }}
+              style={{ width: "100%" }}
               key={index}
             >
-              <h5 className="" style={{ color: color, width: "200px" }}>
+              <h5 className="" style={{ color: color, width: "100%" }}>
                 {item.title}:
               </h5>
               <div className="d-flex justify-content-center">
@@ -40,7 +40,7 @@ const Details = ({ color }) => {
                 <p
                   className="ps-3"
                   style={{
-                    width: "200px",
+                    width: "100%",
                     fontSize: "1.3rem",
                     marginLeft: item.padding,
                   }}

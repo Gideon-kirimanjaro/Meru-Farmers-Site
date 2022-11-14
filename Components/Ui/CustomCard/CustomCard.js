@@ -4,7 +4,7 @@ import Styles from "./CustomCard.module.css";
 const CustomCard = ({ bgColor, cardData }) => {
   return (
     <>
-      <div className="container">
+      <div className="container" style={{ width: "100%" }}>
         <div className="row">
           {cardData.map((item, index) => {
             return (

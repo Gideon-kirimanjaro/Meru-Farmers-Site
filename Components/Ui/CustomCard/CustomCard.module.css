@@ -1,5 +1,6 @@
 .mainDiv {
   padding: 30px;
+  width: 100%;
 }
 #cardBodyGreen {
   background-color: green;
