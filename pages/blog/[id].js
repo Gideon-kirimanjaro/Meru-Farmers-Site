@@ -28,10 +28,6 @@ const blogArticle = ({ blog }) => {
         this.page.url = window.location.href;
         this.page.identifier = slug;
       };
-
-      // const script = document.createElement("script");
-      // script.src = "https://maca-web.disqus.com/embed.js";
-      // script.setAttribute("data-timestamp", Date.now().toString());
       let d = document,
         s = d.createElement("script");
       s.src = "https://maca-web.disqus.com/embed.js";
@@ -59,13 +55,13 @@ const blogArticle = ({ blog }) => {
               {/* <HeaderComponent cl title={item.title} textColor={color} /> */}
               <h1
                 className="d-flex justify-content-center"
-                style={{ color: color, fontSize: "3.5rem", margin: "50px" }}
+                style={{ color: color, fontSize: "3.5rem", margin: "10px" }}
               >
-                {item.title}
+                {item.title && item.title}
               </h1>
               <h1
                 className="d-flex justify-content-center"
-                style={{ color: "black", fontSize: "1.5rem" }}
+                style={{ color: "violet", fontSize: "1.4rem" }}
               >
                 ~~
                 {item.reading_time} Min Read
@@ -73,7 +69,7 @@ const blogArticle = ({ blog }) => {
               <div className={styles.mainDiv}>
                 <div
                   dangerouslySetInnerHTML={{ __html: item.html }}
-                  style={{ fontSize: "1.4rem" }}
+                  style={{ fontSize: "1.1rem" }}
                 ></div>
               </div>{" "}
               {showContent ? (
@@ -86,7 +82,7 @@ const blogArticle = ({ blog }) => {
                   Load Comments
                 </StyledButton>
               ) : (
-                <div className="px-5 mx-5" id="disqus_thread"></div>
+                <div className="" id="disqus_thread"></div>
               )}
             </div>
           );

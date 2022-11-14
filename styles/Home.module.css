@@ -10,11 +10,12 @@
 }
 .mainDiv {
   box-sizing: content-box;
-  margin: 50px;
+  /* margin: 20px; */
+  /* width: 100%; */
 }
 .mainDiv img {
   height: auto;
-  width: 350px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }

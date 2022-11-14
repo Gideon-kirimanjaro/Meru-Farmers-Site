@@ -67,14 +67,6 @@ const BlogUi = ({ heading, src, tag, time, date, tagColor }) => {
             </div>
           </div>
         </div>{" "}
-        {/* <hr
-          style={{
-            color: "white",
-            backgroundColor: tagColor,
-            height: "5",
-            padding: "2px",
-          }}
-        /> */}
       </div>
     </div>
   );
