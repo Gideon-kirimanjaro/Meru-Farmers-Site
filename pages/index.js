@@ -6,8 +6,7 @@ import { useContext } from "react";
 import BlogContext from "../store/blog-data";
 const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
 const GHOST_URL = process.env.GHOST_URL;
-const api =
-  "https://gideon-kamau.ghost.io/ghost/api/content/posts/?key=$15ba85399bb4588e4ddc2b8e1a&include=tags,authors,slug";
+
 export default function Home({ blogs }) {
   return (
     <div>
