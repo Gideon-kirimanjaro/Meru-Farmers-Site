@@ -17,6 +17,7 @@
 }
 .navLinks ul {
   display: flex;
+  align-items: center;
 }
 .navLinks ul {
   list-style: none;
@@ -35,7 +36,8 @@
 .navLinks ul li a:hover {
   color: black;
 }
-.navLinks ul li a:hover::after {
+
+.active:hover::after {
   content: "";
   background: green;
   padding: 2px;
@@ -44,6 +46,7 @@
   left: 20px;
   bottom: -7px;
 }
+
 #barIcon,
 #closeIcon {
   height: 32px;
@@ -52,7 +55,8 @@
 }
 #logo {
   height: 40px;
-  width: 40px;
+  width: 30px;
+  align-items: center;
 }
 .iconsDiv {
   display: none;

@@ -9,9 +9,10 @@ const CallToAction = ({ color }) => {
   return (
     <div id={Styles.mainDiv} className="d-md-flex ">
       <div className={Styles.leftDiv}>
-        <p className="d-flex justify-content-center">
+        <h1 className="d-flex justify-content-center">
           We pride ourselves in solving food insecurity through the growth of
-        </p>{" "}
+          Macadamia
+        </h1>{" "}
         <div className="d-flex justify-content-center">
           {" "}
           <StyledButton primary color={color}>

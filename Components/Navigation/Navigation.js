@@ -53,7 +53,11 @@ const Navigation = ({ color }) => {
             {links.map((item, i) => {
               return (
                 <li key={item.id}>
-                  <Link style={{ color: color }} href={item.href}>
+                  <Link
+                    style={{ color: color }}
+                    href={item.href}
+                    className={Styles.active}
+                  >
                     {item.title}
                   </Link>
                 </li>

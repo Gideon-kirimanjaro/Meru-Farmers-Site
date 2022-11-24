@@ -38,22 +38,31 @@ export const ContextProvider = (props) => {
     const newDate = new Date(d);
     const year = newDate.getFullYear();
     const months = [
-      "January",
-      "February",
+      "Jan",
+      "Feb",
       "March",
       "April",
       "May",
       "June",
       "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     const month = months[newDate.getMonth()];
+
     const day = newDate.getDate();
     return { day, month, year };
+  };
+  const trimExcerpt = (excerpt) => {
+    if (excerpt.length > 20) {
+      const trimmedExcerpt = excerpt.substring(0, 120);
+      return trimmedExcerpt;
+    } else {
+      return excerpt;
+    }
   };
   return (
     <BlogContext.Provider
@@ -64,6 +73,7 @@ export const ContextProvider = (props) => {
         tagName: tagName,
         tagColor: tagColor,
         date: date,
+        trimExcerpt: trimExcerpt,
       }}
     >
       {props.children}
