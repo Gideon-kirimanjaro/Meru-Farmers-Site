@@ -3,8 +3,8 @@ import About from "../Components/About/About";
 import TextImage from "../Components/Ui/TextImage/TextImage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
-const CONTENT_API_KEY = "15ba85399bb4588e4ddc2b8e1a";
-const GHOST_URL = "https://gideon-kamau.ghost.io";
+const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
+const GHOST_URL = process.env.GHOST_URL;
 const about = ({ blogs }) => {
   return (
     <div>

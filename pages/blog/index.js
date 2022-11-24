@@ -7,8 +7,8 @@ import Spinner from "../../Components/Ui/Spinner/Spinner";
 import { useRouter } from "next/router";
 import Footer from "../../Components/Footer/Footer";
 //------------------------------------------------------------------API------
-const CONTENT_API_KEY = "15ba85399bb4588e4ddc2b8e1a";
-const GHOST_URL = "https://gideon-kamau.ghost.io";
+const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
+const GHOST_URL = process.env.GHOST_URL;
 
 const index = ({ blogs }) => {
   const router = useRouter();
