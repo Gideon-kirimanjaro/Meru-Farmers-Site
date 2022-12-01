@@ -4,7 +4,7 @@ import History from "../../Tabs/History/History";
 import Process from "../../Tabs/Process/Process";
 import Specifications from "../../Tabs/Specifications/Specifications";
 import Why from "../../Tabs/Why/Why";
-import styles from "./CustomTabs.module.css";
+
 const CustomTabs = ({ data, color }) => {
   return (
     <Tabs

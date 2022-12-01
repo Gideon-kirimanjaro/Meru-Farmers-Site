@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./process.module.css";
+import styles from "./Process.module.css";
 const Process = () => {
   return (
     <div className={styles.container}>
