@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./history.module.css";
+import styles from "./History.module.css";
 const History = () => {
   return (
     <div className={styles.container}>
