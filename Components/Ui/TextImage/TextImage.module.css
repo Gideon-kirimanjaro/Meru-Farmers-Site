@@ -1,6 +1,11 @@
 #mainDiv {
   font-family: montserrat;
 }
+#img {
+  height: 300px;
+  margin: auto;
+  object-fit: contain;
+}
 #textDiv {
   height: auto;
   background-image: linear-gradient(
@@ -18,9 +23,15 @@
   font-size: 1.1rem;
   color: white;
 }
-#imgDiv {
-  height: auto;
+#textDiv h5 {
+  padding: 30px;
   margin: auto;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: white;
+}
+
+#imgDiv {
 }
 
 /* Extra small devices (phones, 600px and down) */

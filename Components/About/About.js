@@ -3,10 +3,18 @@ import Navigation from "../Navigation/Navigation";
 import CustomCard from "../Ui/CustomCard/CustomCard";
 import HeaderComponent from "../Ui/HeaderComponent/HeaderComponent";
 import TextImage from "../Ui/TextImage/TextImage";
-import { faHeader, faInfo } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeader,
+  faInfo,
+  faPeopleCarryBox,
+  faPeopleGroup,
+  faPeopleRoof,
+  faSquareCaretUp,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer/Footer";
 import BlogArticle from "../BlogArticle/BlogArticle";
 import BreadCrumbCustom from "../Ui/BreadCrumb/BreadCrumbCustom";
+import CustomTabs from "../Ui/CustomTabs/CustomTabs";
 const About = ({ blogs }) => {
   const title = "About us";
   const body = "We pride ourselves in producing the best quality Macadamia";
@@ -27,21 +35,21 @@ const About = ({ blogs }) => {
   const cardData = [
     {
       id: 1,
-      title: "Integrity",
-      body: "Fresh Macadamia homegrown and harvested",
-      icon: faInfo,
+      title: "Respectfully Assured",
+      body: "We are highly talented individuals who believe in our talents and are confident in our success",
+      icon: faPeopleGroup,
     },
     {
       id: 2,
-      title: "Honesty",
-      body: "One of the best locally grown Macadamia with quality taste",
-      icon: faHeader,
+      title: "Customer Gratification",
+      body: "We strive to win our consumers' trust. We observe, engage, and learn about their needs before fulfilling them",
+      icon: faPeopleCarryBox,
     },
     {
       id: 3,
-      title: "Innovative",
-      body: "Macadamia serves your nutritional values ",
-      icon: faInfo,
+      title: "Respect And Integrity",
+      body: "We cherish each individual's potential and human dignity. We conduct our operations in line with the highest professional and ethical standards ",
+      icon: faPeopleRoof,
     },
   ];
   const color = "#f18f01";
@@ -52,8 +60,20 @@ const About = ({ blogs }) => {
       <div className="">
         <HeaderComponent title={title} body={body} textColor={color} />
       </div>
-      <TextImage content={content} height={300} width={300} />
-      <HeaderComponent title={"Our values"} textColor={color} />
+      {/* <TextImage content={content} height={300} width={300} /> */}
+      <CustomTabs color={color} />
+      <HeaderComponent
+        textColor="blue"
+        title="Our Vision"
+        body="To be East Africa’s leading processor and supplier of quality macadamia nuts."
+      />
+      <HeaderComponent
+        textColor="blue"
+        title="Our Mision"
+        body="To supply quality macadamia nuts while commercially boosting the local community, encouraging environmental protection via renewable energy sources, and serving the needs of both local and international markets.
+        "
+      />
+      <HeaderComponent title={"Our Values"} textColor="blue" />
       <CustomCard cardData={cardData} bgColor={color} />
       <BlogArticle color={color} blogs={blogs} />
       <Footer color={color} />

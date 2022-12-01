@@ -8,20 +8,19 @@ const TextImage = ({ content, height, width }) => {
         content.map((item, index) => {
           return (
             <div className={item.style} id={Styles.mainDiv} key={index}>
-              <div className="d-md-flex " id={Styles.textDiv}>
+              <div id={Styles.textDiv}>
+                <h5 className="d-flex justify-content-center">{item.title}</h5>
                 <p>{item.body}</p>
               </div>
-              <div
+
+              <Image
+                src={item.src}
+                height={height}
+                width={width}
+                alt="an image"
                 className="d-flex justify-content-center "
-                id={Styles.imgDiv}
-              >
-                <Image
-                  src={item.src}
-                  height={height}
-                  width={width}
-                  alt="an image"
-                />
-              </div>
+                id={Styles.img}
+              />
             </div>
           );
         })}

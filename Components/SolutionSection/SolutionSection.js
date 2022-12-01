@@ -30,9 +30,9 @@ const SolutionSection = ({ color }) => {
     },
   ];
 
-  const title = "Solutions we offer";
+  const title = "Our Process";
   const body =
-    "We grow and supply Macadamia to the local community as a way of giving back to the community and development";
+    "We specialize in providing excellent halal-quality macadamia nuts that humans have skillfully hand-processed with love and care. Sun drying, sorting, and packaging are manual methods used to process nuts. Once the nuts have been vacuum packed, they are dosed with nitrogen, sealed, and then cartoned in 25 pounds of food-grade aluminum before being refrigerated to 12–14 degrees Celsius";
   return (
     <div className={Styles.mainDiv}>
       <div className={Styles.container}>
